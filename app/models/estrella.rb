@@ -1,0 +1,2 @@
+class Estrella < ApplicationRecord
+end

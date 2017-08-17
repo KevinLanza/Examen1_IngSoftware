@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="color:green">Planetas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="color:green">Nombre</th>
+      <th style="color:green">Tamaño</th>
+      <th style="color:green">Galaxia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planets.each do |planet| %>
+      <tr>
+        <td><%= planet.nombre %></td>
+        <td><%= planet.tamaño %></td>
+        <td><%= planet.galaxia %></td>
+        <td><%= link_to 'Show', planet %></td>
+        <td><%= link_to 'Edit', edit_planet_path(planet) %></td>
+        <td><%= link_to 'Destroy', planet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Planet', new_planet_path %>
+
+<link rel="stylesheet" type="text/css" href= "CSS.css"> 
+<style type="text/css">
+body
+{
+background-image: url(https://i.ytimg.com/vi/gMZwsqPLr6o/maxresdefault.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+
+</style>
+
+</body>

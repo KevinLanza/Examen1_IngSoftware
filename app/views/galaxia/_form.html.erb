@@ -1,0 +1,36 @@
+<%= form_with(model: galaxium, local: true) do |form| %>
+  <% if galaxium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(galaxium.errors.count, "error") %> prohibited this galaxium from being saved:</h2>
+
+      <ul>
+      <% galaxium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_area :nombre, id: :galaxium_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :galaxium_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<link rel="stylesheet" type="text/css" href= "CSS.css"> 
+<link href="css/style.css" rel="stylesheet">
+<style type="text/css">
+body
+{
+background-image: url(https://c2.staticflickr.com/8/7239/6916800754_e2a8fc0aac_b.jpg);
+background-size: 100%;
+background-repeat: no-repeat;

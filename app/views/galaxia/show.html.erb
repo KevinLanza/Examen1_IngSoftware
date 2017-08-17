@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @galaxium.nombre %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @galaxium.body %>
+</p>
+
+<%= link_to 'Edit', edit_galaxium_path(@galaxium) %> |
+<%= link_to 'Back', galaxia_path %>
+
+<link rel="stylesheet" type="text/css" href= "CSS.css"> 
+<link href="css/style.css" rel="stylesheet">
+<style type="text/css">
+body
+{
+background-image: url(https://c2.staticflickr.com/8/7239/6916800754_e2a8fc0aac_b.jpg);
+background-size: 100%;
+background-repeat: no-repeat;

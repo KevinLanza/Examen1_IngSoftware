@@ -1,0 +1,32 @@
+<%= form_with(model: planet, local: true) do |form| %>
+  <% if planet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(planet.errors.count, "error") %> prohibited this planet from being saved:</h2>
+
+      <ul>
+      <% planet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :planet_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tamaño %>
+    <%= form.text_area :tamaño, id: :planet_tamaño %>
+  </div>
+
+  <div class="field">
+    <%= form.label :galaxia %>
+    <%= form.text_area :galaxia, id: :planet_galaxia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

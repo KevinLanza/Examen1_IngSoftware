@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @estrella.nombre %>
+</p>
+
+<p>
+  <strong>Tamaño:</strong>
+  <%= @estrella.tamaño %>
+</p>
+
+<%= link_to 'Edit', edit_estrella_path(@estrella) %> |
+<%= link_to 'Back', estrellas_path %>

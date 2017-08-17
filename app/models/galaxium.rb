@@ -1,0 +1,2 @@
+class Galaxium < ApplicationRecord
+end
